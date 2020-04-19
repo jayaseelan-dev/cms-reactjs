@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.app-header, .app-footer {
+  background-color: white;
+  min-height: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #42a1ef;
+}
+
+.app-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%
+}
+
+/* STARTS - Menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #363f4e;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #42a1ef;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #42a1ef;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+/* ENDS - Menu */
+
+/* .app-body {
+  overflow: auto;
+  height: 400px;
+} */
+
