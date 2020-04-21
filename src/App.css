@@ -6,15 +6,19 @@ body {
 .app-header, .app-footer {
   background-color: white;
   min-height: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   color: #42a1ef;
 }
 
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
 .app-footer {
-  position: absolute;
+  display: flex;
+  justify-self: center;
   bottom: 0;
   width: 100%
 }
@@ -32,7 +36,7 @@ body {
 
 .sidebar a {
   display: block;
-  color: black;
+  color: white;
   padding: 16px;
   text-decoration: none;
 }
@@ -47,15 +51,31 @@ body {
   color: white;
 }
 
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  .content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
 }
 /* ENDS - Menu */
 
+.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+}
 /* .app-body {
   overflow: auto;
   height: 400px;
 } */
-
