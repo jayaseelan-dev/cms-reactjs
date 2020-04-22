@@ -1,6 +1,11 @@
 import React from 'react';
-import './App.css';
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+
+import './App.css';
+
+import CompanyList from './Company/CompanyList';
+import EmployeeList from './Employee/EmployeeList';
+import DashboardDetails from './Dashboard/DashboardDetails';
 
 function App() {
   return (
@@ -23,13 +28,13 @@ function App() {
           <section className="content">
             <Switch>
               <Route path="/dashboard-details">
-                <Dashboard />
+                <DashboardDetails />
               </Route>
               <Route path="/company-details">
-                <Company />
+                <CompanyList />
               </Route>
               <Route path="/employee-details">
-                <Employee />
+                <EmployeeList />
               </Route>
               <Route path="/">
                 <h2>Click on any menu</h2>
@@ -39,30 +44,6 @@ function App() {
         </BrowserRouter>
       </section>
       
-    </div>
-  );
-}
-
-function Company() {
-  return (
-    <div>
-      <h2>Company</h2>
-    </div>
-  );
-}
-
-function Employee() {
-  return (
-    <div>
-      <h2>Employee</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
     </div>
   );
 }
