@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom';
 
 import './App.css';
 
@@ -20,22 +20,16 @@ function App() {
       <section className="app-body">
         <BrowserRouter>
           <section className="sidebar">
-            <Link to="/dashboard-details">Dashboard</Link>
-            <Link to="/company-details">Company</Link>
-            <Link to="/employee-details">Employee</Link>
+            <NavLink to="/dashboard-details" activeClassName="active">Dashboard</NavLink>
+            <NavLink to="/company-details" activeClassName="active">Company</NavLink>
+            <NavLink to="/employee-details" activeClassName="active">Employee</NavLink>
           </section>
 
           <section className="content">
             <Switch>
-              <Route path="/dashboard-details">
-                <DashboardDetails />
-              </Route>
-              <Route path="/company-details">
-                <CompanyList />
-              </Route>
-              <Route path="/employee-details">
-                <EmployeeList />
-              </Route>
+              <Route path="/dashboard-details" component={DashboardDetails}/>
+              <Route path="/company-details" component={CompanyList}/>
+              <Route path="/employee-details" component={EmployeeList}/>
               <Route path="/">
                 <h2>Click on any menu</h2>
               </Route>
