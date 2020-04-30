@@ -1,11 +1,13 @@
 import React from 'react';
-import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, NavLink, Switch, Route, Redirect } from 'react-router-dom';
 
 import './App.css';
 
 import CompanyList from './Company/CompanyList';
 import EmployeeList from './Employee/EmployeeList';
 import DashboardDetails from './Dashboard/DashboardDetails';
+import SignUp from './UserAccount/SignUp';
+import Login from './UserAccount/Login';
 
 function App() {
   return (
@@ -19,6 +21,13 @@ function App() {
       {/* BODY CONTENT */}
       <section className="app-body">
         <BrowserRouter>
+          <Switch>
+            <Route exact path='/' component={()=>(<Redirect to='/login'/>)}/>
+            <Route path="/login" component={Login} />
+            <Route path="/sign-up" component={SignUp} />
+          </Switch>
+        </BrowserRouter>
+        {/* <BrowserRouter>
           <section className="sidebar">
             <NavLink to="/dashboard-details" activeClassName="active">Dashboard</NavLink>
             <NavLink to="/company-details" activeClassName="active">Company</NavLink>
@@ -30,14 +39,10 @@ function App() {
               <Route path="/dashboard-details" component={DashboardDetails}/>
               <Route path="/company-details" component={CompanyList}/>
               <Route path="/employee-details" component={EmployeeList}/>
-              <Route path="/">
-                <h2>Click on any menu</h2>
-              </Route>
             </Switch>
           </section>
-        </BrowserRouter>
+        </BrowserRouter> */}
       </section>
-      
     </div>
   );
 }
