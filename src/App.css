@@ -1,81 +1,47 @@
-body {
-  margin: 0;
-  font-family: "Lato", sans-serif;
-}
-
-.app-header, .app-footer {
-  background-color: white;
-  min-height: 10px;
-  color: #42a1ef;
+.app-header,
+.app-footer {
+    background-color: white;
+    min-height: 10px;
+    color: #42a1ef;
 }
 
 .app-header {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 15px;
-  margin-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .app-footer {
-  display: flex;
-  justify-self: center;
-  bottom: 0;
-  width: 100%
+    display: flex;
+    justify-self: center;
+    bottom: 0;
+    width: 100%
 }
 
 /* STARTS - Menu */
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #363f4e;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
+.app-nav {
+    margin: 0;
+    padding: 12px;
+    background-color: #363f4e;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.sidebar a {
-  display: block;
-  color: white;
-  padding: 16px;
-  text-decoration: none;
-}
- 
-.sidebar a.active {
-  background-color: #42a1ef;
-  color: white;
+.app-nav a {
+    color: white;
+    padding: 12px;
+    text-decoration: none;
 }
 
-.sidebar a:hover:not(.active) {
-  background-color: #42a1ef;
-  color: white;
+.app-nav a.active {
+    background-color: #42a1ef;
+    color: white;
 }
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  .content {margin-left: 0;}
+.app-nav a:hover:not(.active) {
+    background-color: #42a1ef;
+    color: white;
 }
-
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-}
-/* ENDS - Menu */
-
-.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-}
-/* .app-body {
-  overflow: auto;
-  height: 400px;
-} */
