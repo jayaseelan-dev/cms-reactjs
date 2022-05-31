@@ -5,8 +5,9 @@
   "dependencies": {
     "react": "latest",
     "react-dom": "latest",
+    "react-router-dom": "latest",
     "react-scripts": "latest",
-    "react-router-dom": "latest"
+    "sass": "^1.52.1"
   },
   "scripts": {
     "start": "react-scripts start",
