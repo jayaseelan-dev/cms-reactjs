@@ -1,0 +1,28 @@
+@use '../../styles/colors.scss';
+
+/* STARTS - Menu */
+.app-nav {
+    margin: 0;
+    padding: 12px;
+    background-color: colors.$darkblue-color;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.app-nav a {
+    color: colors.$white-color;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.app-nav a.active {
+    background-color: colors.$blue-color;
+    color: colors.$white-color;
+}
+
+.app-nav a:hover:not(.active) {
+    background-color: colors.$blue-color;
+    color: colors.$white-color;
+}

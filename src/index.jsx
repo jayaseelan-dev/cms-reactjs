@@ -6,7 +6,7 @@ import App from './App';
 import CompanyList from './routes/Company/CompanyList';
 import EmployeeList from './routes/Employee/EmployeeList';
 
-import './index.css';
+import './index.scss';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root')
