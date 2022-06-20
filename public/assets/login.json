@@ -1,0 +1,42 @@
+[
+    {
+        "id": "629ae838c88a5f91404b1437",
+        "guid": "3ad9bf17-fda7-43b7-b7e1-57d13c87b1d2",
+        "isActive": true,
+        "name": "Admin",
+        "email": "admin@cms.com",
+        "password": "admin"
+    },
+    {
+        "id": "629ae8381b8a87abde62136a",
+        "guid": "e075d1a3-48b1-4d55-8b63-8f678e9b68ba",
+        "isActive": true,
+        "name": "Wilkerson Hopkins",
+        "email": "wilkersonhopkins@googlemail.com",
+        "password": "1234"
+    },
+    {
+        "id": "629ae838c912ac804b6c5e82",
+        "guid": "c3b68bcc-b30a-4bfe-afa8-2ed7db29e914",
+        "isActive": false,
+        "name": "Gabriela Hamilton",
+        "email": "gabrielahamilton@endipine.com",
+        "password": "1234"
+    },
+    {
+        "id": "629ae838c9a615e4172f9fc2",
+        "guid": "29b05f75-b6f8-4ab4-8d84-2fa68514dc12",
+        "isActive": false,
+        "name": "Jeanine Cervantes",
+        "email": "jeaninecervantes@cms.com",
+        "password": "1234"
+    },
+    {
+        "id": "629ae838bc3701ed1843e6af",
+        "guid": "14629206-e676-49b0-910c-2126baff1ab9",
+        "isActive": true,
+        "name": "Salazar Fitzgerald",
+        "email": "salazarfitzgerald@cms.com",
+        "password": "1234"
+    }
+]
