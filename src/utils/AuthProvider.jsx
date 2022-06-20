@@ -1,8 +1,7 @@
 // https://reactrouter.com/docs/en/v6/examples/auth
 
 import React, { useState } from 'react';
-
-import { fakeAuthProvider } from './FakeAuthProvider';
+import { login } from '../services';
 
 let AuthContext = React.createContext(null);
 
@@ -10,17 +9,25 @@ function AuthProvider({ children }) {
   let [user, setUser] = useState(null);
 
   let signin = (credentials, callback) => {
-    return fakeAuthProvider.signin(() => {
-      setUser(credentials.emailId);
-      callback();
+    return login().then(response => {
+      return response.json();
+    }).then(users => {
+      // Filter logged in user
+      const loginUser = users.find(
+        user => user.email === credentials.emailId && user.password === credentials.password
+      );
+
+      if (loginUser) {
+        setUser(loginUser.name);
+        callback(true);
+      } else {
+        callback(false);
+      }
     });
   };
 
-  let signout = (callback) => {
-    return fakeAuthProvider.signout(() => {
-      setUser(null);
-      callback();
-    });
+  let signout = () => {
+    setUser(null);
   };
 
   let value = { user, signin, signout };
